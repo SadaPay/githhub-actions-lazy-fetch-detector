@@ -1,0 +1,7 @@
+name: Lazy Fetch Detector
+description: Searches src directory for lazy fetching
+
+runs:
+  using: composite
+  steps:
+    - run: ! grep -n -r -e "fetch = FetchType.LAZY" src
